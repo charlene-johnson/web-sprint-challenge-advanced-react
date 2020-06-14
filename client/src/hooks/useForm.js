@@ -3,8 +3,7 @@ import {useLocalStorage} from "./useLocalStorage";
 
 export const useForm = (initialValues, key) => {
     const [values, setValues] = useLocalStorage(initialValues, key);
-    const [showSuccessMessage, setShowSuccessMessage] = useLocalStorage('Success', false)
-    
+    const [showSuccessMessage, setShowSuccessMessage] = useLocalStorage(false, "Success")
     const handleChanges = e => {
         setValues({
             ...values,
